@@ -1,0 +1,4 @@
+cmd commands to run the backend:
+
+	- default profile:      mvn spring-boot:run 
+	- db bootstrap profile: mvn spring-boot:run -Dspring.profiles.active=bootstrap
