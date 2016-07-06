@@ -18,7 +18,7 @@ public class MapController {
 	private MapService mapService;
 
 	@RequestMapping(value = "/getFullMap", method = RequestMethod.GET)
-	public List<Map> addRestaurant(){
+	public List<Map> getFullMap(){
 		return mapService.findAll();
 	}
 }
