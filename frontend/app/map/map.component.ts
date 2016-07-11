@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MapService } from './map.service';
+import { Map } from './map';
 
 @Component({
     selector: 'map',
@@ -9,7 +10,10 @@ import { MapService } from './map.service';
 
 export class MapComponent implements OnInit {
 
-    map: any;
+    map: Map[];
+    actualShowSize: number;
+    sizeOptions: number[];
+    
 
     constructor(
         private mapService: MapService
@@ -17,6 +21,8 @@ export class MapComponent implements OnInit {
 
     ngOnInit() { 
         this.map = this.mapService.getFullMap();
+        this.actualShowSize = this.mapService.getActualShowSize();
+        this.sizeOptions = this.mapService.getSizeOptions();
     }
 
 }
