@@ -2,3 +2,12 @@ cmd commands to run the backend:
 
 	- default profile:      mvn spring-boot:run 
 	- db bootstrap profile: mvn spring-boot:run -Dspring.profiles.active=bootstrap
+	
+	
+cmd command to install the dependencies
+
+	- npm install
+	
+cmd command to run the frontend
+	
+	- npm start

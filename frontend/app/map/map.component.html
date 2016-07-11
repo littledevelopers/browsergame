@@ -1,3 +1,11 @@
-<a *ngFor="let m of map">
-    {{m}} <div *ngIf="m % 3 == 0"></div>
-</a>
+<div>
+    <select [(ngModel)]="actualShowSize">
+        <option *ngFor="let size of sizeOptions" [value]="size">{{size}}</option>
+    </select>
+</div>
+
+<div>
+    <a *ngFor="let m of map; let index = index">
+        {{m.testType}}<div *ngIf="(index + 1) % actualShowSize == 0"></div>
+    </a>
+</div>
